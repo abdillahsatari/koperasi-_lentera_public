@@ -1,0 +1,23 @@
+.text-larger {
+	font-size: 18px;
+}
+
+.about-greenforest-content {
+	margin-top: 100px;
+}
+
+.google-map__one{
+	position: relative;
+	display: block;
+	border: none;
+	height: 450px;
+	width: 100%;
+	max-width: 1595px;
+	margin: 0 auto;
+}
+.our-services-box{
+	height: 100%;
+}
+.our-services-items{
+	height: 100%;
+}
