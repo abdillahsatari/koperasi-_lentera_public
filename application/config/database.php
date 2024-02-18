@@ -73,10 +73,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-// 'username' => 'u8877646_abdillah',
-// 'password' => 'HpPavilionDv6',
-// 'database' => 'u8877646_lenteraDigitalIndonesia_db',
-
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',

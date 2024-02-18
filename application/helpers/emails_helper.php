@@ -46,9 +46,9 @@ function sendEmail($params){
 
 	USE THIS IN DEVELOPEMENT MODE TO PREVENT EMAIL HOSTING LIMITATION
 
-	host: scwp.tfx.co.id
-	email:	email_testing@tfx.co.id
-	password: D3veL0pErTif1A@eMaiLT3st1nG
+	host: 
+	email:
+	password: 
 
 	*/
 	/*=============================*/
@@ -57,7 +57,7 @@ function sendEmail($params){
 
 	USE THIS IN PRODUCTION MODE
 
-	host: srv89.niagahoster.com
+	host: 
 	email:
 	password:
 
@@ -65,20 +65,11 @@ function sendEmail($params){
 	/*=============================*/
 
 
-//	$mail->isSMTP();
-//	$mail->Host     	= 'srv89.niagahoster.com';
-//	$mail->SMTPAuth 	= true;
-//	$mail->Username 	= 'no-reply@lenteradigitalindonesia.com';
-//	$mail->Password 	= 'L3nteraDigitalIndonesia@2022';
-//	$mail->SMTPSecure 	= 'ssl';
-//	$mail->Port     	= 465; // 465/587
-
-
 	$mail->isSMTP();
-	$mail->Host     	= 'lenteradigitalindonesia.com';
+	$mail->Host     	= 'dadidugroup.com';
 	$mail->SMTPAuth 	= true;
-	$mail->Username 	= 'no-reply@lenteradigitalindonesia.com';
-	$mail->Password 	= 'lenter4D1g1talIndonesia@2022';
+	$mail->Username 	= 'no-reply@dadidugroup.com';
+	$mail->Password 	= 'No-reply@2024';
 	$mail->SMTPSecure 	= 'ssl';
 	$mail->Port     	= 465; // 465/587
 
@@ -86,8 +77,8 @@ function sendEmail($params){
 											  'verify_peer_name' => false,
 											  'allow_self_signed' => true));
 
-	$mail->setFrom('email_testing@tfx.co.id', 'Lentera Digital Indonesia');
-	$mail->addReplyTo('developer@tfx.co.id');
+	$mail->setFrom('no-reply@dadidugroup.com', 'KSP Dadidu Group');
+	$mail->addReplyTo('support@dadidugroup.com ');
 	$mail->addAddress($params['emailRecipient']);
 	$mail->Subject = $params['emailSubject'];
 	$mail->isHTML(TRUE);
