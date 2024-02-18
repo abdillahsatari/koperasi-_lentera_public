@@ -23,12 +23,12 @@ issues, as well as missing features.
  Application Demo
 *******************
 
-- Please visit: htps://ksp.dadidugroup.com to access demo site
+- Please visit: https://ksp.dadidugroup.com to access demo site
 - Admin Access:
-    - route: htps://ksp.dadidugroup.com/pengurus/login
+    - route: https://ksp.dadidugroup.com/pengurus/login
     - username: admin@lenteradigitalindonesia.com
     - password: admin
 - Member Access:
-    - route: htps://ksp.dadidugroup.com/member/login
+    - route: https://ksp.dadidugroup.com/member/login
     - username: 123456789
     - password: member
