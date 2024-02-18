@@ -7,7 +7,7 @@
 -  Application Admin
 
 ************************
-system Requirements
+System Requirements
 ************************
 
 -  Codeigniter 3
@@ -23,7 +23,7 @@ issues, as well as missing features.
  Application Demo
 *******************
 
-- Please visit htps://ksp.dadidugroup.com to access demo site
+- Please visit: htps://ksp.dadidugroup.com to access demo site
 - Admin Access:
     - route: htps://ksp.dadidugroup.com/pengurus/login
     - username: admin@lenteradigitalindonesia.com
