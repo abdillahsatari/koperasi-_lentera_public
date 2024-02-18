@@ -6,18 +6,13 @@
 -  Application Member
 -  Application Admin
 
-###################
-    Set up
-###################
+=========================
+    system Requirements
+=========================
 
 -  Codeigniter 3
 -  PHP 7.4
 -  MySQL 8.0.30
-
-
-*******************
-Server Requirements
-*******************
 
 PHP version 7.4 above is not recommended.
 It should work on below version such as 5.3.7 as well, but we strongly recommended you NOT to run
