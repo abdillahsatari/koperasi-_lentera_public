@@ -72,7 +72,7 @@
 								<?= $this->session->flashdata('message') ?>
 								<form action="<?= base_url('member/register')?>"
 									  method="POST" class="js-form_registration"
-									  data-url="<?= base_url('member/MemberAjax/verifyMemberPhoneNumber')?>">
+									  data-url="<?= base_url('authentication/MemberAuth/memberPhoneNumberValidation')?>">
 									<input type="hidden" name="<?= $csrfName ?>" value="<?= $csrfToken ?>">
 									<input type="hidden" name="session_type" value="<?= $session?>">
 									<div class="form-group">

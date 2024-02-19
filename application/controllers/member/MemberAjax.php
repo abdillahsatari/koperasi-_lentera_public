@@ -70,21 +70,6 @@ class MemberAjax extends CI_Controller {
 		die();
 	}
 
-	public function verifyMemberPhoneNumber(){
-
-		$input	= $this->input->post(NULL, TRUE);
-
-		$csrf_token  	= $this->security->get_csrf_hash();
-		$where			= array("member_phone_number" => $input["dataMemberPhoneNumber"]);
-		$dataCount		= $this->CrudModel->cw("member", $where);
-
-		$result 		= array ('data'			=> $dataCount,
-								'csrf_token' 	=> $csrf_token);
-
-		echo json_encode($result);
-		die();
-	}
-
 	public function validateBalanceInputAmmount(){
 
 		$input	= $this->input->post(NULL, TRUE);

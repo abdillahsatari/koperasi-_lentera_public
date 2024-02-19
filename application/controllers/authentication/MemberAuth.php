@@ -190,6 +190,21 @@ class MemberAuth extends CI_Controller {
 		}
 	}
 
+	public function memberPhoneNumberValidation(){
+
+		$input	= $this->input->post(NULL, TRUE);
+
+		$csrf_token  	= $this->security->get_csrf_hash();
+		$where			= array("member_phone_number" => $input["dataMemberPhoneNumber"]);
+		$dataCount		= $this->CrudModel->cw("member", $where);
+
+		$result 		= array ('data'			=> $dataCount,
+								'csrf_token' 	=> $csrf_token);
+
+		echo json_encode($result);
+		die();
+	}
+
 	public function verify(){
 		$memberEmail			= $this->input->get('email');
 		$memberToken			= $this->input->get('token');

@@ -1,5 +1,15 @@
 (function ($) {
 
+	$.fn._getCsrfToken = function(_newToken) {
+
+		if (_newToken) {
+			$(this).find('input[name="_token"]').val(_newToken);
+			return;
+		} else {
+			return $(this).find('input[name="_token"]').val();
+		}
+	};
+
 	function validateForm($form) {
 		$form.validate({
 			onkeyup: false,
@@ -11,9 +21,14 @@
 				$(element).removeClass(errorClass);
 				$(element).css("border-color", "#dc3545");
 			},
+			unhighlight: function (element,errorClass) {
+				$(element).css("border-color", "");
+			},
 			errorPlacement: function(error, element) {
 				if (element.hasClass('js-input-with-plugin')){
 					error.appendTo(element.parent("div").find(".js_input-error-placement"));
+				} else if (element.hasClass('js-input-group')){
+					error.appendTo(element.parent("div").parent("div").find(".js_input-error-placement"));
 				} else {
 					error.insertAfter(element);
 				}
@@ -89,7 +104,8 @@
 		var _inputName	= $('input[name="member_full_name"]');
 		var _inputEmail	= $('input[name="member_email"]');
 		var _inputPhone	= $('input[name="member_phone_number"]');
-		var _phoneNumberIsValid = true;
+		var _inputKtp	= $('input[name="member_ktp_number"]');
+		var _phoneNumberIsValid = true;	
 
 		_inputPhone.on('change', function () {
 			var _this			= $(this);
@@ -106,9 +122,15 @@
 				processData: false,
 				contentType: false
 			}).done(function(result) {
+				// console.log(result);
+				console.log("validation response: ", JSON.parse(result));
 				var obj = $.parseJSON(result);
 				(obj.data > 0) ? _phoneNumberIsValid = false : _phoneNumberIsValid = true ;
 				_formMemberRegistration._getCsrfToken(obj.csrf_token);
+			}).fail(function(jqXHR, textStatus, errorThrown) {
+				console.log("errorXhr:", jqXHR);
+				console.log("errorStatus:", textStatus);
+				console.log("errorThrown:", errorThrown);
 			});
 		});
 

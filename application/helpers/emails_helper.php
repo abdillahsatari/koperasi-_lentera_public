@@ -66,7 +66,7 @@ function sendEmail($params){
 
 
 	$mail->isSMTP();
-	$mail->Host     	= 'dadidugroup.com';
+	$mail->Host     	= 'smtp.hostinger.co.id';
 	$mail->SMTPAuth 	= true;
 	$mail->Username 	= 'no-reply@dadidugroup.com';
 	$mail->Password 	= 'No-reply@2024';
