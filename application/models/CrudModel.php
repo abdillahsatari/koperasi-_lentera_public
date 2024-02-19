@@ -16,7 +16,9 @@ class CrudModel extends CI_Model {
     public function i($t,$d){$this->db->insert($t,$d);} //input
     public function u($t,$d,$w){$this->db->where($w)->update($t,$d);} //update
     public function d($t,$w){$this->db->where($w)->delete($t);} //delete
-    public function q($q){return $this->db->query($q)->result();} //query
+    public function q($q){
+        $this->db->query("SET sql_mode=(SELECT REPLACE(@@sql_mode, 'ONLY_FULL_GROUP_BY', ''));");
+        return $this->db->query($q)->result();} //query
     public function qq($q){return $this->db->query($q);} //query
 	public function i2($t,$d){$this->db->insert($t,$d); $insertedId = $this->db->insert_id(); return $insertedId;} //insert with return id
 
