@@ -66,10 +66,10 @@ function sendEmail($params){
 
 
 	$mail->isSMTP();
-	$mail->Host     	= 'smtp.hostinger.co.id';
+	$mail->Host     	= '';
 	$mail->SMTPAuth 	= true;
-	$mail->Username 	= 'no-reply@dadidugroup.com';
-	$mail->Password 	= 'No-reply@2024';
+	$mail->Username 	= '';
+	$mail->Password 	= '';
 	$mail->SMTPSecure 	= 'ssl';
 	$mail->Port     	= 465; // 465/587
 
@@ -77,7 +77,7 @@ function sendEmail($params){
 											  'verify_peer_name' => false,
 											  'allow_self_signed' => true));
 
-	$mail->setFrom('no-reply@dadidugroup.com', 'KSP Dadidu Group');
+	$mail->setFrom('', 'KSP Dadidu Group');
 	$mail->addReplyTo('support@dadidugroup.com ');
 	$mail->addAddress($params['emailRecipient']);
 	$mail->Subject = $params['emailSubject'];
